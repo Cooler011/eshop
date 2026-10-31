@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="text/javascript" http-equiv="Content-Script-Type"/><meta content="text/css" http-equiv="Content-Style-Type"/><title data-message="buy01_01_001"></title><link href="css/minified/mymenu.css" rel="stylesheet"/><link href="css/index.css" rel="stylesheet"/><link href="css/buy.css" rel="stylesheet"/><link href="local-navigation.css" rel="stylesheet"/><link rel="stylesheet" href="shop-fixes.css"><link rel="icon" type="image/webp" href="../favicon.webp"></head><body class=""><div id="wrap"><div id="sb_cont"><div id="buy01_01"><div class="header_common hero ob pdz"><h1></h1><p class="btn_b0201"><a class="btn_004 se evt_next" href=""><span data-message="common01_01_033"></span><img height="60" src="image/btn_right.png" width="62"/></a></p></div><div class="buy_body"><div id="coupon_type"></div><script id="template_coupon_type_select" type="text/x-jquery-tmpl"><ul class="fox coupon_type_select">
+      {{if has_owned_coupon}}
+      <li>
+        <input type="radio" id="use_owned_coupon" name="coupon_type" value="owned_coupon" data-sound-assigned="true" />
+        <label for="use_owned_coupon">${ str_use_owned_coupon }</label>
+      </li>
+      {{/if}}
+      {{if can_use_coupon_code}}
+      <li>
+        <input type="radio" id="use_coupon_code" name="coupon_type" value="coupon_code" data-sound-assigned="true" />
+        <label for="use_coupon_code">${ str_use_coupon_code }</label>
+      </li>
+      {{/if}}
+      <li class="disuse_coupon">
+        <div class="disuse_coupon_option">
+          <input type="radio" id="disuse_coupon" name="coupon_type" value="disuse_coupon" data-sound-assigned="true" />
+          <label for="disuse_coupon">${ str_disuse_coupon }</label>
+        </div>
+        <div class="disuse_coupon_price">
+          <span class="price">${price}</span>
+        </div>
+      </li>
+    </ul></script><h2 data-message="buy01_01_002" id="buy_confirm_h2"></h2><div class="clearfix" id="rating_display"><div id="rd_l"></div><div id="rd_r"></div></div><div id="buy_about_this"></div></div><div class="buy_submit ob cho clearfix"><p class="btn_b0201"><a class="btn_004 se evt_next" href=""><span data-message="common01_01_033"></span><img height="60" src="image/btn_right.png" width="62"/></a></p></div></div><div id="buy01_02"><div class="header_common"><h1></h1></div><div class="buy_body"><div class="fox"><p class="lf" data-message="buy01_02_002_02"></p><p id="bb_media"><span id="sel_media"></span></p><p id="bb_capa"><span id="sel_title_size"></span></p><p class="lf" data-message="buy01_02_002"></p><p class="lf" data-message="buy01_02_004"></p></div><p class="btn_c"><a class="btn_002 se" data-message="buy01_02_003" href="" id="evt_data_manage"></a></p></div></div><div id="buy01_03"><div class="header_common"><h1></h1></div><div class="buy_body"><h2 data-message="buy01_03_001" id="buy_payment_h2"></h2><dl class="amount_indicator clearfix" id="buy_insufficient_funds"><dt class="bb balance_line" data-message="common01_01_020"></dt><dd class="bb balance_line"> </dd><dt class="required_amount" data-message="buy01_03_002"></dt><dd class="required_amount"> </dd></dl><ul class="select_ul" id="buy_payment"><li class="btn_010" id="evt_pcard"><a class="se" data-se-label="SE_WAVE_OK" href=""><span class="add_balance_text" data-message="buy01_03_004"></span></a></li><li class="btn_010" id="evt_ccard" style="display:none"><a class="se" data-se-label="SE_WAVE_OK" href=""><span class="pay_ccard_text" data-message="buy01_03_003"></span></a></li><li class="ccard_diabled" id="sel_ccard_disabled" style="display:none;"><div class="ccard_disabled_eu hide"><img height="100" src="image/money/qr-eu.png" width="100"/><div data-message="money01_01_009">クレジットカードをご利用の方は、https://www.nintendo.eu/N3DS_payment をご覧ください。</div></div><div class="ccard_disabled_au hide"><img height="100" src="image/money/qr-au.png" width="100"/><div data-message="money01_01_009_02">クレジットカードをご利用の方は、https://www.nintendo.com.au/n3ds-payment をご覧ください。</div></div></li><li class="btn_010" id="evt_iccard" style="display:none"><a class="se pay_iccard" data-se-label="SE_WAVE_OK" href=""><span class="pay_iccard_text" data-message="buy01_03_005"></span> <span class="gamepad_text" data-message="buy01_03_006"></span></a></li></ul><p class="btn_r" id="sel_settlement_law" style="display:none;"><a class="btn_001 se" data-message="common01_01_031" data-se-label="SE_WAVE_OK" href="" id="evt_settlement_law"></a></p></div></div><div id="buy01_07"><div class="header_common"><h1></h1></div><div id="contents_common"><div id="simple_box"><h2 id="sel_attention"></h2></div><p class="btn_c"><a class="btn_002 se" data-message="buy01_07_003" href="" id="evt_attention"></a></p></div></div><div id="buy02_01"><div class="header_common hero ob pdz" id="sel_header"><h1></h1><p class="btn_b0201 muk"><a class="btn_004 se evt_purchase" data-message="common01_01_011" href="#"></a></p></div><div class="buy_body"><div class="buy_confirm"><div class="buy_confirm_text"><div id="bfr_release_date" style="display:none;"><p data-message="buy02_01_002_02"></p></div><div id="bfr_message" style="display:none;"><p data-message="buy02_01_002"></p></div><div id="bfr_not_cancelable_message" style="display:none;"><p data-message="buy02_01_002_05"></p></div><div id="bfr_pre_order_message" style="display:none;"><p data-message="buy02_01_002_03"></p></div></div><div id="specific_trade_law" style="display: none"><p class="btn_r"><a class="btn_001 se" data-message="common01_01_030" data-se-label="SE_WAVE_OK" href="" id="evt_trade_law"></a></p></div></div><div class="clearfix" id="buy_final_reminder"><div class="clearfix" id="bfr_bottom"><p class="confirm_scroll" data-message="buy02_01_021" id="sel_main_title" style="display:none;"></p><p class="apply_coupon" data-message="buy02_01_023" id="using_coupon" style="display: none"></p><p class="apply_coupon" data-message="buy02_01_025" id="using_owned_coupon" style="display: none"></p><div id="bfr_top"><img class="sel_title_img" data-original="" height="82" src="image/placeholder/place_icon_buy02.png" width="82"/><h2 class="sel_title_name"></h2></div><div id="reminder_content"></div><script id="template_title_taxex" type="text/x-jquery-tmpl"><div class="frame_white clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_data }</dd>
+          <dt>${ str_tax }</dt>
+          <dd>${ str_tax_data }</dd>
+          <dt class="buy_dl_total">${ str_total }</dt>
+          <dd class="buy_dl_total">${ str_total_data }</dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+        </dl>
+      </div></script><script id="template_title_taxin" type="text/x-jquery-tmpl"><div class="frame_white clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_taxin_data }<br /><span>${ str_price_taxin }</span></dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+        </dl>
+      </div></script><script id="template_title_free" type="text/x-jquery-tmpl"><div class="frame_white clearfix">
+        <dl class="buy_2pane_l">
+          <dt class="orange sel_color">${ str_description }</dt>
+          <dd></dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+        </dl>
+      </div></script><script id="template_aoc_tax_ex" type="text/x-jquery-tmpl"><div class="frame_white clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_data }</dd>
+          <dt>${ str_tax }</dt>
+          <dd>${ str_tax_data }</dd>
+          <dt class="buy_dl_total">${ str_total }</dt>
+          <dd class="buy_dl_total">${ str_total_data }</dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+            <dd class="aoc_contain">${ str_include_update }</dd>
+        </dl>
+      </div>
+    <p class="confirm_scroll" >{{html str_scroll }}</p>
+    <hr class="add_con_hr" /></script><script id="template_aoc_taxin" type="text/x-jquery-tmpl"><div class="frame_white clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_taxin_data }<br /><span>${ str_price_taxin }</span></dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+          <dd class="aoc_contain">${ str_include_update }</dd>
+        </dl>
+      </div>
+    <p class="confirm_scroll" >{{html str_scroll }}</p>
+    <hr class="add_con_hr" /></script><script id="template_aoc_free" type="text/x-jquery-tmpl"><div class="frame_white clearfix">
+        <dl class="buy_2pane_l">
+          <dt class="orange sel_color">${ str_description }</dt>
+          <dd>${ str_free }</dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+          <dd class="aoc_contain">${ str_include_update }</dd>
+        </dl>
+      </div>
+    <p class="confirm_scroll">{{html str_scroll }}</p>
+    <hr class="add_con_hr" /></script><script id="template_ticket_taxex" type="text/x-jquery-tmpl"><h3 class="riyo_h3">${ str_ticket_title }</h3>
+      <div class="frame_white riyo clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_data }</dd>
+          <dt>${ str_tax }</dt>
+          <dd>${ str_tax_data }</dd>
+          <dt class="buy_dl_total">${ str_total }</dt>
+          <dd class="buy_dl_total">${ str_total_data }</dd>
+        </dl>
+      </div></script><script id="template_ticket_taxin" type="text/x-jquery-tmpl"><h3 class="riyo_h3">${ str_ticket_title }</h3>
+      <div class="frame_white riyo clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_taxin_data }<br /><span>${ str_price_taxin }</span></dd>
+        </dl>
+      </div></script><script id="template_ticket_free" type="text/x-jquery-tmpl"><h3 class="riyo_h3">${ str_ticket_title }</h3>
+      <div class="frame_white riyo clearfix">
+        <dl class="buy_2pane_l">
+            <dt class="orange sel_color">${ str_description }</dt>
+            <dd>${ str_free }</dd>
+        </dl>
+      </div></script><div id="aoc_detail"></div><script id="template_aoc_detail_taxex" type="text/x-jquery-tmpl"><h3 class="add_con_h3">${ aoc_title }</h3>
+      <div class="frame_white add_con clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_data }</dd>
+          <dt>${ str_tax }</dt>
+          <dd>${ str_tax_data }</dd>
+          <dt class="buy_dl_total">${ str_total }</dt>
+          <dd>${ str_total_data }</dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+        </dl>
+      </div></script><script id="template_aoc_detail_taxin" type="text/x-jquery-tmpl"><h3 class="add_con_h3">${ aoc_title }</h3>
+      <div class="frame_white add_con clearfix">
+        <dl class="buy_2pane_l">
+          <dt>${ str_price }</dt>
+          <dd>${ str_price_taxin_data }<br /><span>${ str_price_taxin }</span></dd>
+        </dl>
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+        </dl>
+      </div></script><script id="template_aoc_detail_free" type="text/x-jquery-tmpl"><h3 class="add_con_h3">${ aoc_title }</h3>
+      <div class="frame_white add_con clearfix">
+        {{if is_redeem}}
+        <dl class="buy_2pane_l">
+            <dt class="orange sel_color_aoc">${ str_redeem }</dt>
+            <dd></dd>
+        </dl>
+        {{else}}
+        <dl class="buy_2pane_l">
+            <dt class="orange sel_color_aoc">${ str_description }</dt>
+            <dd>${ str_free }</dd>
+        </dl>
+        {{/if}}
+
+        <dl class="buy_2pane_r">
+          <dt>${ str_size }</dt>
+          <dd>{{html html_size_data }}</dd>
+        </dl>
+      </div></script><div id="reminder_content_detail"></div><script id="template_detail_taxex" type="text/x-jquery-tmpl"><div class="frame_white">
+      <div class="buy_dl_bottom clearfix">
+        <h3 class="frame_white_title">${ str_detail }</h3>
+
+        <dl class="frame_white_contents clearfix">
+          <dt class="bdb">${ str_balance_before }</dt>
+          <dd class="bdb">${ str_balance_before_data }</dd>
+          <dt class="bdr">${ str_price }</dt>
+          <dd class="bdr">${ str_price_data }</dd>
+          <dt class="bdr">${ str_tax }</dt>
+          <dd class="bdr">${ str_tax_data }</dd>
+          <dt class="bdr">${ str_total }</dt>
+          <dd class="bdr">${ str_total_data }</dd>
+          <dt class="bdb">${ str_balance_after }</dt>
+          <dd class="bdb">${ str_balance_after_data }</dd>
+        </dl>
+      </div>
+      </div></script><script id="template_detail_taxin" type="text/x-jquery-tmpl"><div class="frame_white">
+      <div class="buy_dl_bottom clearfix">
+        <h3 class="frame_white_title">${ str_detail }</h3>
+
+        <dl class="frame_white_contents clearfix">
+          <dt class="bdb">${ str_balance_before }</dt>
+          <dd class="bdb">${ str_balance_before_data }</dd>
+          <dt class="bdr">${ str_price }</dt>
+          <dd class="bdr">${ str_price_taxin_data }<br /><span>${ str_price_taxin }</span></dd>
+          <dt class="bdb">${ str_balance_after }</dt>
+          <dd class="bdb">${ str_balance_after_data }</dd>
+        </dl>
+      </div>
+      </div></script><script id="template_detail_free" type="text/x-jquery-tmpl"><div class="frame_white">
+      <div class="buy_dl_bottom clearfix">
+        <h3 class="frame_white_title">${ str_detail }</h3>
+
+        <dl class="frame_white_contents clearfix">
+          {{if is_redeem}}
+          <dt class="orange">${ str_description }</dt>
+          <dd></dd>
+          {{else}}
+          <dt class="bdb orange sel_color">${ str_description }</dt>
+          <dd class="bdb orange">${ str_free }</dd>
+          {{/if}}
+        </dl>
+      </div>
+      </div></script><div id="jp_legal_description"><p data-message="buy02_01_026" id="jp_legal_sales_end" style="display:none;"></p><p data-message="buy02_01_027" id="jp_legal_service_normal" style="display:none;"></p><p data-message="buy02_01_028" id="jp_legal_service_pre_prder" style="display:none;"></p></div></div></div></div><div class="buy_submit ob cho clearfix"><p class="btn_b0201 muk"><a class="btn_004 se evt_purchase" data-message="common01_01_011" href="#"></a></p></div></div><div class="scroll_escape" id="buy02_02"><div class="buy_body"><div id="buy_loading_wrap"><div data-message="buy02_02_001" id="buy_loading"></div></div></div></div><div id="buy02_03"><div class="header_common"><h1></h1></div><div class="buy_body"><div class="buy_completed clearfix"><h2 data-message="buy02_03_001"></h2><p data-message="buy02_03_002" id="thanks_message"></p><p class="btn_r"><a class="btn_002 se" data-message="buy02_03_006" data-se-label="SE_WAVE_OK" href="" id="evt_receipt"></a></p></div><p id="continue_shopping"><a class="btn_002 se" data-message="common01_01_034" data-se-label="SE_WAVE_OK" href="#" id="flow_p"></a></p></div></div></div><div id="sel_menu_bar"></div></div><div style="display: none"><span data-message="buy01_05_001" id="dialog_msg_reDL"></span> <span data-message="common01_01_014_02" id="dialog_msg_reDL_ok"></span> <span data-message="common01_01_001_02" id="dialog_back"></span> <span data-message="common01_01_011" id="dialog_purchase"></span> <span data-message="common01_01_007_02" id="dialog_back_indisc_aoc"></span> <span data-message="common01_01_011_02" id="dialog_purchase_indisc_aoc"></span> <span data-message="common01_01_026" id="str_DL"></span> <span data-message="buy01_06_001" id="dialog_msg_DL"></span> <span data-message="buy01_06_003" id="dialog_msg_indisc_aoc"></span> <span data-message="common01_01_006" id="dialog_msg_ok"></span> <span data-message="buy01_01_001" id="str_pre_confirm"></span> <span data-message="buy02_01_001" id="str_final_confirm"></span> <span data-message="buy02_01_016" id="str_update_confirm"></span> <span data-message="buy02_01_022" id="str_scroll"></span> <span data-message="buy01_02_001" id="str_size_info"></span> <span data-message="buy02_01_004" id="str_price_taxin"></span> <span data-message="buy02_01_004_02" id="str_price_taxin_AU"></span> <span data-message="common01_01_019" id="str_price"></span> <span data-message="buy02_01_006" id="str_tax"></span> <span data-message="buy02_01_007" id="str_total"></span> <span data-message="buy02_01_010" id="str_size"></span> <span data-message="buy02_01_019" id="str_total_price"></span> <span data-message="common01_01_056" id="str_free"></span> <span data-message="buy02_01_018" id="str_install"></span> <span data-message="buy02_01_018_001" id="str_total_size"></span> <span data-message="buy01_02_005" id="str_media"></span> <span data-message="common01_01_066" id="str_media_nand"></span> <span data-message="common01_01_067" id="str_media_usb"></span> <span data-message="buy02_01_015" id="str_inc_update"></span> <span data-message="buy02_01_008" id="str_balance_before"></span> <span data-message="buy02_01_009" id="str_balance_after"></span> <span data-message="buy02_01_012" id="str_purchased"></span> <span data-message="buy02_01_013" id="str_demo"></span> <span data-message="buy02_01_014" id="str_redeem"></span> <span data-message="buy02_03_010" id="str_redeem2"></span> <span data-message="buy02_01_017" id="str_aoc_update"></span> <span data-message="common01_01_014" id="str_btn_redl"></span> <span data-message="common01_01_026" id="str_btn_dl"></span> <span data-message="common01_01_082" id="str_btn_dl_free"></span> <span data-message="buy02_01_011" id="str_detail"></span> <span data-message="buy02_01_024" id="str_in_app_purchase"></span> <span data-message="buy02_03_002_02" id="str_ticket_msg"></span><div id="str_gb"><span class="capa_gb" data-message="common01_01_062"></span></div><div id="str_mb"><span class="capa_mb" data-message="common01_01_063"></span></div><div id="str_kb"><span class="capa_kb" data-message="common01_01_064"></span></div><span data-message="buy01_07_001" id="str_aoc_attention"></span> <span data-message="buy01_07_002" id="str_ticket_attention"></span> <span data-message="buy02_02_002" id="dialog_msg_full"></span> <span data-message="legal05_01_001" id="dialog_msg_age"></span> <span data-message="buy01_06_002" id="dialog_msg_latest_version"></span> <span data-message="buy01_01_004" id="str_ru"></span> <span data-message="buy01_01_008" id="str_use_owned_coupon"></span> <span data-message="buy01_01_007" id="str_use_coupon_code"></span> <span data-message="buy01_01_009" id="str_disuse_coupon"></span> <span data-message="boot01_01_005" id="dialog_msg_update"></span> <span data-message="data03_03_002" id="dialog_update"></span> <span data-message="buy01_01_006" id="dialog_msg_withdrawal"></span> <span data-message="common01_01_075" id="dialog_agree"></span> <span data-message="common01_01_024" id="dialog_cancel"></span></div><ul id="ft_navi"><li class="top" id="top_link_01"><div class="se" data-href="index.html#top" data-se-label="SE_WAVE_OK_SUB"><span data-message="common01_01_038"></span></div></li><li class="menu" id="top_link_02"><div data-href=""><img height="70" src="image/img_unknown_MiiIcon.png" width="70"/><br/><span data-message="common01_01_002"></span></div></li><li class="balance" id="top_link_03"><div class="se" data-href="money01_01.html" data-se-label="SE_WAVE_OK_SUB"><span data-message="common01_01_020"></span><span id="balance"></span></div></li><li class="search" id="top_link_04"><div class="se" data-href="always02_01.html" data-se-label="SE_WAVE_OK_SUB"><span data-message="common01_01_003"></span></div></li><li class="back" id="top_link_05"><div data-href=""><span data-message="common01_01_001"></span></div></li></ul><script data-shop-src="original-template-bank.js" type="application/x-shop-script"></script><script data-shop-src="original-template-loader.js" type="application/x-shop-script"></script><script data-shop-src="local-navigation.js" type="application/x-shop-script"></script><script data-shop-src="original-message-bank.js" type="application/x-shop-script"></script><script data-shop-src="original-localization.js" type="application/x-shop-script"></script><script data-shop-src="local-funds.js" type="application/x-shop-script"></script><script data-shop-src="catalogue-data.js" type="application/x-shop-script"></script><script data-shop-src="original-jquery-template.js" type="application/x-shop-script"></script><script>window.GEISHA_AUDIO={menu:"audio/menu.mp3",settings:"audio/settings.mp3"};</script><script data-shop-src="shop-features.js" type="application/x-shop-script"></script><script src="shop-bootstrap.js"></script></body></html>

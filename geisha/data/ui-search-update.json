@@ -1,0 +1,34 @@
+{
+  "cursor": "Supplied player-one blue pointer; CSS viewport clips top-row pointer; 80 by 100 CSS pixels with page-scale compensation. Original image unchanged.",
+  "favicon": "Supplied Panel-4-logo.webp; applied to root and Geisha page documents.",
+  "sounds": {
+    "click": "https://github.com/wiiu-env/launchiine/blob/master/data/sounds/button_click.mp3",
+    "hover": "https://github.com/wiiu-env/launchiine/blob/master/data/sounds/settings_click_2.mp3",
+    "note": "Menu replacement UI assets used for the requested hover/click behavior. These are not claimed to be independently verified original Nintendo eShop effects."
+  },
+  "search": [
+    "keyword Enter submission",
+    "case/accent-insensitive keyword matching",
+    "platform selection",
+    "genre and publisher selection including dialog inputs",
+    "All versus individual selection semantics",
+    "selected summaries",
+    "Reset All",
+    "Reset Price",
+    "price validation and min/max filtering for known numeric prices",
+    "software/video/both mode filtering",
+    "previous selection restoration",
+    "existing sort and pagination"
+  ],
+  "limitations": [
+    "Catalogue has no recovered numeric prices, so a price-restricted search excludes entries whose price is unknown.",
+    "No archived video records are bundled; video-only searches return no matches."
+  ],
+  "validation": [
+    "Combined Mario + Nintendo + NES search returned seven titles",
+    "Reset All returned all groups to their All option and cleared text",
+    "Reset Price cleared both limits",
+    "Both UI sound files played in browser with no decode errors",
+    "Original JS syntax checks passed"
+  ]
+}

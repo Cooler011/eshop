@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/*-- 起動処理 boot --*/
+
+#sb_cont { text-align:center; margin:auto; }
+#sb_cont #boot01_02 { height:720px; overflow:hidden; }
+#sb_cont #boot01_03 { }
+#sb_cont #boot01_08 { height:720px; overflow:hidden; }
+#sb_cont #boot01_09 { height:720px; overflow:hidden; }
+
+
+/*-- 01_01 --*/
+
+#sb_cont #boot01_01 { width:1280px; height:720px; display:table-cell; vertical-align:middle; overflow:hidden; position:relative; }
+#sb_cont #boot01_01 img { box-shadow:0 1px 10px 6px rgba(204,204,204,0.4); }
+#sb_cont #boot01_01 h1 { font-size:28px; text-align:left; position:absolute; top:60px; left:145px; }
+#boot01_01_mes { width:1200px; height:75px; background:url(../image/boot/bg_boot01_01_mes.png); border-radius:10px; position:absolute; top:620px; left:40px; }
+#boot01_01_mes p { display:table-cell; vertical-align:middle; width:1030px; height:75px; background:url(../image/boot/ico_boot01_01_mes.png) 14px 4px no-repeat; text-align:right; padding:0 30px 0 140px; font-size:25px; color:#ffffff; }
+
+
+/*-- 01_02 --*/
+
+#boot_box { width:700px; min-height:50px; background:#ffffff; box-shadow:0 0 20px rgba(0,0,0,0.1); border-radius:12px; 
+    margin:137px auto 72px auto; padding:30px 0; }
+#bb_mes { line-height:1.5; margin:0 40px 25px 40px; font-size:30px; }
+#bb_lang { margin:0 50px 0 50px; padding:30px 0 0 0; border-top:2px #cccccc solid; font-size:35px; }
+
+#bb_ok a { display:block; width:800px; height:90px; line-height:90px; text-align:center; margin:auto; font-size:30px; }
+
+
+/*-- 01_03 --*/
+
+#bb_mes_wrap { margin:64px 0 0 0; }
+#bb_choice { width:700px; min-height:50px; background:#f5f5f5; text-align:center; margin:20px auto 55px auto; padding:25px 0; border-radius:12px; font-size:30px; }
+#bb_choice ul { text-align:left; margin:0 0 0 150px; }
+#bb_choice ul li { min-height:50px; margin:0 0 50px 0; }
+#bb_choice ul li:last-child { margin:0 !important; }
+
+.box_boot {
+    margin: 48px 115px 50px 115px;
+    padding:33px 50px 40px 50px;
+    background:#ffffff;
+    box-shadow:0 0 20px rgba(0,0,0,0.1);
+    border-radius:12px;
+}
+.box_boot_button {
+    margin: 48px 115px 50px 115px;
+}
+
+/*-- 01_04 --*/
+
+#sb_cont #boot01_04 { padding:0 auto 35px auto !important; height:720px; overflow:hidden; }
+#boot_welcome { width:1000px; min-height:470px; background:#ffffff; box-shadow:0 0 20px rgba(0,0,0,0.1); border-radius:15px; margin:66px 140px 0 140px; }
+#boot_welcome h2 { width:800px; height:125px; background:url(../image/boot/bg_boot01_04_01.png) center bottom no-repeat; text-align:center; margin:auto; padding:35px 0 0 0; font-size:35px; color:#ff7d00; }
+#boot_welcome p { line-height:1.5; text-align:center; margin:auto; padding:15px 40px 35px 40px; font-size:28px; }
+#boot01_04 #bb_ok { padding:45px 0 0 0; }
+
+
+/*-- 01_05 --*/
+
+#boot_notice { width:950px; min-height:50px; line-height:1.5; background:#ffffff; box-shadow:0 0 20px rgba(0,0,0,0.1); border-radius:15px; 
+    text-align:center; text-align:left; margin:48px 115px 40px 115px; padding:25px 50px 25px 50px; padding:auto; font-size:27px; }
+
+#bb_btn_2pane li { float:left; }
+#bb_btn_2pane li a { display:block; width:500px; height:80px; line-height:80px; font-size:30px; }
+
+
+/*-- 01_06 --*/
+
+#boot_deliver_p { line-height:1.5; padding-bottom:35px; font-size:30px; }
+#bb_deliver_select { min-height:50px;}
+#bb_deliver_select ul li { width:410px; min-height:50px; text-align:left; margin:40px 20px 0 40px; float:left; }
+#bb_deliver_select ul label { font-size:30px; }
+#bb_ok { padding-bottom:35px !important; }
+
+
+/*-- 01_07 --*/
+
+#boot_club_n h2 { line-height:1.5; text-align:left; font-size:28px; }
+#boot_club_n div { margin:40px 60px 0 20px; text-align:left; }
+#boot_club_n p { margin:0 0 25px 0; font-size:25px; color:#646464; }
+#bb_club_n_input {font-size:28px;}
+#bb_club_n_input dt { width:974px; text-align:center; margin:40px auto 5px auto; float:none; clear:both; }
+#bb_club_n_input dd { width:974px; text-align:center; margin:0 auto; float:none; clear:both; }
+#bb_club_n_input input {
+    width:800px;
+    height:60px;
+    padding:0 15px;
+    font-size:28px;
+}
+
+/*-- 01_08 --*/
+
+#boot_zero { margin:260px 0 170px 0; }
+#boot_zero h2 { font-size:30px; }
+
+
+/*-- 01_09 --*/
+
+#boot_wish {}
+#boot_wish h2 { margin:105px 140px 0 140px; padding:0 0 25px 0; border-bottom:2px #bebebe solid; font-size:32px; }
+#boot_wish p { line-height:1.5; margin:0 140px 60px 140px; padding:40px 0 0 0; border-top:2px #ffffff solid; font-size:30px; }
+#bb_ok_l a { display:block; width:800px; height:105px; line-height:105px; text-align:center; margin:0 auto 55px auto; font-size:32px; }
+

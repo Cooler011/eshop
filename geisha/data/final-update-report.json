@@ -1,0 +1,22 @@
+{
+  "catalogue_records": 2380,
+  "descriptions": 2109,
+  "verified_external_downloads": 35,
+  "artwork_files": 4552,
+  "description_source": "https://www.gametdb.com/wiiutdb.zip?LANG=EN",
+  "archive_collection": "https://archive.org/details/14_wiiu_games",
+  "verification": "35 exact normalized title + EU region matches. HTTP HEAD 200 application/octet-stream checked 2026-10-31. A small Mario Bros. title was exercised through the browser purchase flow. Files are not hosted in this ZIP. Availability can change.",
+  "audio_source": "https://downloads.khinsider.com/game-soundtracks/album/wii-u-system-audio-background-music",
+  "audio_files": [
+    "eShop - Menu (Track 1)",
+    "eShop - Settings"
+  ],
+  "gaps": [
+    "Most catalogue entries have no verified download.",
+    "Original regional prices/taxes and installed sizes are not recovered. Purchase does not debit funds without a known price.",
+    "No complete verified eShop sound-effect set.",
+    "GameTDB descriptions are supplemental, not verified Samurai storefront prose.",
+    "Point cards are a local simulation: any unused 16-character alphanumeric dummy code adds $10, capped at $200.",
+    "Saved card view uses a fixed demo mask; no card numbers, security codes, or passwords are retained."
+  ]
+}

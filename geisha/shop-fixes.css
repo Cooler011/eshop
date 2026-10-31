@@ -1,0 +1,23 @@
+/* Preserve native visual assets while replacing device-dependent float geometry. */
+#shelf-list{display:block!important;float:none!important;clear:both!important;padding:0!important;list-style:none!important}
+#shelf-list>.m-list-item{display:flex!important;align-items:stretch!important;float:none!important;position:relative!important;width:100%!important;min-height:204px!important;height:auto!important;margin:0 0 24px!important;padding:0!important;box-sizing:border-box!important;overflow:hidden!important;clear:both!important}
+#shelf-list .list-status{display:none!important}
+#shelf-list .list-title-outline{display:flex!important;align-items:center!important;position:relative!important;float:none!important;inset:auto!important;flex:1!important;width:auto!important;height:auto!important;min-height:204px!important;box-sizing:border-box!important;padding:20px!important;gap:20px!important}
+#shelf-list .list-title-icon{position:static!important;float:none!important;flex:0 0 128px!important;margin:0!important;width:128px!important;height:128px!important}
+#shelf-list .list-title-icon img{position:static!important;width:128px!important;height:128px!important;object-fit:contain!important}
+#shelf-list .list-title-summary{position:static!important;float:none!important;flex:1!important;width:auto!important;min-width:0!important;margin:0!important;padding:0!important}
+#shelf-list .list-title-summary .name{position:static!important;height:auto!important;min-height:48px!important;white-space:normal!important;overflow:visible!important}
+#shelf-list .star-rating,#shelf-list .feature{display:none!important}
+#shelf-list .platform,#shelf-list .information{position:static!important;float:none!important;width:auto!important;height:auto!important;margin:7px 0 0!important}
+#shelf-list .list-title-action{position:static!important;float:none!important;flex:0 0 245px!important;width:245px!important;height:auto!important;box-sizing:border-box!important;padding:20px 14px!important;display:flex!important;align-items:center!important;border-left:1px solid white!important}
+#shelf-list .el-wish{position:static!important;float:none!important;width:100%!important;height:auto!important;padding:0!important;margin:0!important}
+#shelf-list .el-wish .local-wish{margin:0!important;font-size:23px!important;min-height:60px!important}
+#shelf-list .el-purchase:empty{display:none!important}
+#shelf-main>.sel_shelf_navi{display:flex!important;justify-content:center!important;align-items:center!important;clear:both!important;float:none!important;position:static!important;width:100%!important}
+#data01_01 #sel_buy{height:auto!important;padding:0!important;margin:0 0 14px!important}
+#data01_01 .shop-purchase{display:flex!important;align-items:center;justify-content:center;box-sizing:border-box;width:100%;min-height:62px;padding:12px 18px;color:white!important;font-size:26px;line-height:1.2;text-align:center;border:1px solid #0298e1;border-radius:7px;background:linear-gradient(#00baff,#008bea);box-shadow:0 2px 4px #888;text-decoration:none}
+#data01_01 .shop-purchase:active{background:linear-gradient(#0076da,#00acfa)}
+#data01_01 .title-action{height:auto!important;min-height:0!important;box-sizing:border-box}
+#data01_01 .el-wish{height:auto!important;margin:0!important;padding:0!important}
+#data01_01 .local-wish{display:flex!important;align-items:center;justify-content:center;box-sizing:border-box;width:100%;min-height:60px;padding:8px 12px;margin:0!important;font-size:25px!important}
+#shelf-list .information .publisher,#shelf-list .information .rating{display:block!important;position:static!important;float:none!important;width:auto!important;height:auto!important;margin:0!important;padding:0!important}

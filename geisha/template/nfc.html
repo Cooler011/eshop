@@ -1,0 +1,144 @@
+<script id="money06_01" type="text/template">
+    <div id="sb_cont">
+      <div id="header_common">
+        <h1 data-message="money06_01_001"><!-- 〓電子マネーで残高を追加 --></h1>
+      </div>
+      <div id="contents_common">
+        <h2 data-message="money03_01_002"><!-- 〓追加(登録)する金額を選んでください｡ --></h2>
+        <p class="g_note">{{= max_amount }}</p>
+        <ul id="sel_amount" class="btn_2p">
+        </ul>
+      </div>
+    </div>
+</script>
+<script id="amount" type="text/template">
+{{if (is_excess) { }}
+    <a class="btn_002 btn_not_buy">{{= amount }}</a>
+{{ } else { }}
+    <a href="#" class="btn_002 se" data-se-label="SE_WAVE_OK">{{= amount }}</a>
+{{ } }}
+</script>
+
+<script id="money06_02" type="text/template">
+    <div id="sb_cont">
+      <div id="header_common">
+        <h1 data-message="money06_01_001"><!-- 〓電子マネーで残高を追加 --></h1>
+      </div>
+      <div id="contents_common">
+        <div id="simple_box">
+          <dl class="bb">
+            <dt>
+              <h2 data-message="money06_01_002"><!-- 〓電子マネーでのお支払い金額 --></h2>
+            </dt>
+            <dd>{{= amount }}</dd>
+          </dl>
+          <p class="ic_balance_attention" data-message="money06_01_008"><!-- 〓追加（登録）したあとは、取り消したり返金をおこなうことはできません。
+ここで追加した金額は、Wiiショッピングチャンネル、ニンテンドーDSiショップでは使用できません。 --></p>
+          <div class="ic_balance_touch">
+            <div class="ic_balance_balloon">
+              <span data-message="money06_01_003"><!-- 〓電子マネーを --></span>
+              <img src="image/money/ico_money03_nfc.png" width="46" height="32"/>
+              <span class="ic_balance_ico" data-message="money06_01_003_02"><!-- 〓にタッチしてください。（お支払が確定します） --></span>
+            </div>
+            <img src="image/money/img_money06_DRC.jpg" width="400" height="210" class="ic_balance_drc"/>
+          </div>
+          <div class="ic_balance_info">
+            <div class="kind_card">
+              <h3 data-message="money06_01_004"><!-- 〓ご利用可能な電子マネー （pitapa はご利用できません） --></h3>
+              <img src="image/money/img_money06_card.jpg" width="904" height="50"/>
+            </div>
+            <div class="ic_balance_suica clearfix">
+              <span data-message="money06_01_005"><!-- 〓Suicaをご利用の場合、Suicaへのチャージなどに使えるお得なポイントがたまります。 --></span>
+              <span class="ic_balance_suica_note" data-message="money06_01_006"><!-- 〓※Suicaポイントクラブへの会員登録（無料）が必要です --></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</script>
+<script id="money06_03" type="text/template">
+    <div class="retry_touch">
+      <h1 data-message="money06_02_003"><!-- 〓カードを読み取れませんでした。 --></h1>
+      <div class="retry_touch_contents">
+        <div class="retry_touch_balloon">
+          <p data-message="money06_02_004"><!-- 〓もう一度同じカードをタッチしてください。 --></p>
+        </div>
+        <img src="image/money/img_money06_DRC_card.jpg" width="548" height="276" class="ic_balance_drc_card"/>
+        <div class="retry_touch_img"></div>
+      </div>
+    </div>
+</script>
+
+<script id="money06_05" type="text/template">
+  <div id="sb_cont">
+    <div id="header_common">
+      <h1 data-message="money06_01_001"><!-- 〓電子マネーで残高を追加 --></h1>
+    </div>
+    <div id="contents_common">
+      <h2>{{= complete }}</h2>
+      <dl id="flow_dl" class="clearfix">
+        <dt class="bb" data-message="money06_03_001"><!-- 〓電子マネーで支払われた金額 --></dt>
+        <dd id="sel_add_amount" class="bb">{{= post_amount }}</dd>
+        <dt class="bb" data-message="money06_03_002"><!-- 〓電子マネーの残額 --></dt>
+        <dd id="sel_add_amount" class="bb">{{= nfc_balance }}</dd>
+        <dt data-message="common01_01_020"><!-- 〓残高 --></dt>
+        <dd id="sel_post_balance">{{= balance }}</dd>
+        {{ if (!integrated_account) { }}
+        <dt class="cc"></dt>
+        <dd class="cc"><p class="btn_r"><a href="history05_01.html?tran_id={{= tran_id }}" id="sel_receipt" class="btn_001 se" data-se-label="SE_WAVE_OK" data-message="common01_01_018"><!-- 〓明細を見る --></a></p></dd>
+        {{ } }}
+      </dl>
+      <p class="btn_c"><a href="" id="evt_ok" class="btn_002 se" data-se-label="SE_WAVE_OK" data-message="common01_01_006"><!-- 〓OK --></a></p>
+    </div>
+  </div>
+</script>
+
+
+<script id="money07_01_01" type="text/template">
+    <div id="sb_cont">
+      <div id="contents_common">
+        <div id="simple_box">
+          <h1 data-message="money07_01_008"><!-- 現在、サポートセンターで対応中です。<br />処理が完了するまでお待ちください。 --></h1>
+          <dl id="flow_dl" class="clearfix">
+            <dt data-message="money07_01_004"><!-- 〓管理番号（お問い合わせ用）： --></dt>
+            <dd>{{= transaction_id }}</dd>
+            <dt data-message="money07_01_005" class="recover_error_date"><!-- 〓エラー発生日： --></dt>
+            <dd class="recover_error_date">{{= date }}</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+</script>
+
+<script id="money07_01_02" type="text/template">
+    <div class="recover_error">
+      <h1 data-message="money07_01_001"><!-- 〓電子マネーの処理にエラーがありますので、ボタンを押して解決してください。 --></h1>
+      <p class="btn_c"><a href="#" id="evt_recover" class="btn_001 se" data-se-label="SE_WAVE_OK" data-message="money07_01_002"><!-- 〓エラーを解決する --></a></p>
+      <div id="flow_dl">
+        <p class="bb" data-message="money07_01_003"><!-- 〓何度もこの画面が表示される場合は、Wii U取扱
+説明書に記載されている任天堂テクニカルサポートセンターへご連絡ください。 --></p>
+        <dl class="clearfix">
+          <dt data-message="money07_01_004"><!-- 〓管理番号（お問い合わせ用）： --></dt>
+          <dd>{{= transaction_id }}</dd>
+          <dt data-message="money07_01_005" class="recover_error_date"><!-- 〓エラー発生日： --></dt>
+          <dd class="recover_error_date">{{= date }}</dd>
+        </dl>
+      </div>
+      <div class="recover_error_info">
+        <span class="recover_error_attention" data-message="money07_01_006"><!-- 〓なお、ニンテンドーeショップでは90日を超える場合、及び電子マネーカードのご利用状況によっては、電子マネーの処理を自動完了できない場合がございます。&lt;br&gt;早急にエラーの解決を行ってください。 --></span>
+      </div>
+    </div>
+</script>
+
+<script id="money07_02" type="text/template">
+    <div class="retry_touch">
+      <h1 data-message="money07_02_001"><!-- 〓処理を確定させるため、エラーが起こった時のカードをタッチしてください。 --></h1>
+      <div class="retry_touch_contents">
+        <div class="retry_touch_balloon">
+          <p data-message="money07_02_002"><!-- 〓電子マネーをここにタッチしてください。 --></p>
+        </div>
+        <img src="image/money/img_money06_DRC_card.jpg" width="548" height="276" class="ic_balance_drc_card"/>
+        <div class="retry_touch_img"></div>
+      </div>
+    </div>
+</script>

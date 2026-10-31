@@ -1,0 +1,27 @@
+{
+  "fixes": [
+    "Stable single-row results geometry",
+    "Blue Purchase button",
+    "Shared persistent shop state; old URL balances only seed absent values",
+    "Persistent outer host owns music; screen navigation retains track position"
+  ],
+  "torrent_catalogue_records": 1311,
+  "distinct_torrent_source_pages": 812,
+  "direct_downloads": 35,
+  "source": "https://minerva-archive.org/browse/Internet%20Archive/teamgt19/",
+  "matching": "Normalized title matching against DOM links from eShop, disc and seven Virtual Console directories. VC matches also require matching platform. USA source region is explicitly labelled, including on GB storefront entries.",
+  "verification": "Directory links observed; nine per-title pages spot-checked for matching identity and Download Torrent link. Torrent seeds and complete payloads were not tested. MiNERVA download links point to a collection torrent; select only the desired game in your torrent client.",
+  "browser_checks": [
+    "Results rows render separately with their own icon/text/actions",
+    "1001 Spikes uses blue Purchase button",
+    "Audio time advanced from 0.04 to 8.34 seconds across full-page navigation",
+    "Settings audio continued from 18.95 to 61.47 seconds through funds pages",
+    "Dummy card credited $10; old URL with demo_balance=0 still displayed saved $10"
+  ],
+  "limitations": [
+    "Browser privacy settings can clear local storage; there is no time-based expiry in this build.",
+    "Opening another extracted folder or changing server origin creates separate browser storage.",
+    "812 are source-page links, not 812 verified direct file downloads.",
+    "Prices and original installed sizes are still unknown."
+  ]
+}

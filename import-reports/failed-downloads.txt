@@ -1,0 +1,5 @@
+legal08_01_iarc_bbfc.html: curl: (22) The requested URL returned error: 403 Forbidden
+legal08_01_iarc_rar.html: curl: (22) The requested URL returned error: 403 Forbidden
+manual/manual01_15.html: curl: (22) The requested URL returned error: 403 Forbidden
+manual/manual01_16.html: curl: (22) The requested URL returned error: 403 Forbidden
+manual/manual01_17.html: curl: (22) The requested URL returned error: 403 Forbidden

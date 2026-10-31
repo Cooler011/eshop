@@ -1,0 +1,22 @@
+/* Original Nintendo title templates populated from the archived GB record. */
+(function(){
+function show(){if(!/^#title\?/.test(location.hash))return;var q=new URLSearchParams(location.hash.split('?')[1]);var id=q.get('title')||(q.get('local_title')==='mariobros'?'20010000001126':'');var game=(window.GEISHA_CATALOGUE||[]).find(function(g){return g.id===id});if(!game)return;
+var api=window.GeishaOriginalTemplates,host=document.getElementById('data01_01');if(!host)return;
+if(!document.getElementById('title-original-css')){var c=document.createElement('link');c.id='title-original-css';c.rel='stylesheet';c.href='css/data01_01.css';document.head.appendChild(c)}
+document.title=game.name+' — Nintendo eShop';document.getElementById('wrapper').className='js-title';
+var ctx={class_platform_icon:'icon_wup',url_icon:'image/catalogue/9e4a840952d48b8caf31d8fef606772926cc0ffb238cdac2c3a4c613f728691b.jpg',str_title:'Super Mario Bros.™',star_rating:'',str_price:'',str_new:'',str_pre_order:'',str_sale:'',str_conditional_sale:'',str_owned_coupon:'',str_price_description:'',str_platform:'NES',class_platform:'wup',str_title_name:'Title',str_formal_name:'Super Mario Bros.™',str_release_type:'Release date',str_release_date:'12/09/2013',str_publisher:'Publisher',str_publisher_info:'Nintendo',str_genre:'Genre',str_genre_info:'Platformer',str_storage:'Download size',str_player:'Players',str_player_info:'1–2 (alternating)',str_lang:'Languages',str_lang_info:'English'};
+Object.assign(ctx,{url_icon:game.icon||'image/placeholder/place_icon_wii_u.png',str_title:game.name,str_formal_name:game.name,str_platform:game.platform,str_release_date:game.date,str_publisher_info:game.publisher,str_genre_info:game.genre,str_player_info:game.players||'',str_lang_info:game.languages||''});if(game.id==='20010000001126'){ctx.str_player_info='1–2 (alternating)';ctx.str_lang_info='English'}
+api.mount('#el_headline','title','template_headline',ctx);
+api.mount('#el_action_item','title','template_action_item',{str_loading:'',is_ctr:false,has_demo:false,has_aoc:false,has_ticket:false});
+var img=document.querySelector('#title-header img');if(game.banner){img.src=game.banner;img.classList.remove('hide');img.style.display='block'}else{document.getElementById('title-header').style.display='none';document.getElementById('title-main').classList.add('no_header')}
+document.querySelector('.title-main-loading').remove();
+var desc=document.getElementById('sel_description');if(!game.description&&game.id!=='20010000001126')desc.remove();else {desc.classList.remove('hide');desc.style.display='block';document.getElementById('el_description').textContent=game.description||'Guide Mario and Luigi through the Mushroom Kingdom, overcome enemies and obstacles, and rescue Princess Peach from Bowser. This Wii U Virtual Console release uses the US version of the NES game.';
+}
+if(game.id==='20010000001126'){document.getElementById('sel_storage_head').style.display='';var size=document.getElementById('sel_storage_info_head');size.style.display='';size.textContent='34.88 MB';}
+var spec=document.getElementById('sel_spec_description');spec.classList.remove('hide');spec.style.display='block';document.getElementById('el_spec_description').textContent=(game.rating?'Age rating: '+game.rating+' · ':'')+'Product code: '+game.product;
+var wish=document.querySelector('.el-wish');if(wish){var a=document.createElement('a');a.href='#';a.className='wish local-wish';a.textContent='✓  Add to Watch List';a.onclick=function(e){e.preventDefault();a.textContent='Added to Watch List';try{GeishaStore.setItem('wish_'+game.id,'true')}catch(e){}};wish.replaceChildren(a)}
+var buy=document.getElementById('sel_buy');buy.replaceChildren();var purchase=document.createElement('a');purchase.className='shop-purchase se';purchase.href='buy01_01.html?title='+game.id;purchase.textContent='Purchase';buy.appendChild(purchase);if(game.download_verified||game.torrent_source_url){var download=document.createElement('a');download.className='btn_002 se local-download';download.href=game.download_verified?game.download_url:game.torrent_source_url;download.target='_blank';download.rel='noopener';download.textContent='Download';download.style.cssText='display:block;margin-top:15px;text-align:center';buy.appendChild(download)}
+document.documentElement.style.overflowY='auto';document.body.style.overflowY='auto';window.scrollTo(0,0);
+}
+document.addEventListener('geisha:template-mounted',show);show();
+})();

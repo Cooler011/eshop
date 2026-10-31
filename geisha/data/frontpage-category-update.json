@@ -1,0 +1,26 @@
+{
+  "order": [
+    "Browse by category",
+    "Super Mario",
+    "The Legend of Zelda",
+    "NES",
+    "Super Nintendo",
+    "Nintendo 64",
+    "TurboGrafx-16",
+    "Game Boy Advance",
+    "Nintendo DS",
+    "Wii"
+  ],
+  "artwork": "Unmodified supplied screenshot PNGs displayed through CSS viewports. Source screenshot material retained without generated replacements.",
+  "music": "May 2019 (3DS & Wii U), Nintendo eShop Original Soundtrack",
+  "music_source": "https://downloads.khinsider.com/game-soundtracks/album/nintendo-eshop-original-soundtrack-2011-2017/23.%2520May%25202019%2520%25283DS%2520%2526%2520Wii%2520U%2529.mp3",
+  "verification": [
+    "Browser layout inspected",
+    "NES card opened NES shelf with 89 regional titles",
+    "Parent audio DOM confirmed menu-may2019.mp3 playing"
+  ],
+  "incomplete": [
+    "Pokemon and Metroid images are only partially visible in supplied screenshot; full cards are not reconstructed.",
+    "Separate authentic Wii U eShop click effect could not be verified. General Wii U Menu sounds were not substituted."
+  ]
+}
